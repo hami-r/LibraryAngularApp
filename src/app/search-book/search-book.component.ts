@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class SearchBookComponent {
 
+  title = ""
+
+  readValues = () => {
+    let data = {
+      "title":this.title
+    }
+    console.log(data);
+    
+  }
 }

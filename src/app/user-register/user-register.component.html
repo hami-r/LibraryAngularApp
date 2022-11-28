@@ -9,46 +9,46 @@
                             <div class="row g-3 m-3">
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Name</label>
-                                    <input type="text" class="form-control">
+                                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Aadhar Number</label>
-                                    <input type="text" class="form-control">
+                                    <input name="adharNo" [(ngModel)]="adharNo" type="text" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Address</label>
-                                    <textarea id="" rows="3" cols="50" class="form-control"></textarea>
+                                    <textarea name="address" [(ngModel)]="address" rows="3" cols="50" class="form-control"></textarea>
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Pincode</label>
-                                    <input type="text" class="form-control">
+                                    <input name="pincode" [(ngModel)]="pincode" type="text" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-control">
+                                    <input name="dob" [(ngModel)]="dob" type="date" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Email</label>
-                                    <input type="email" class="form-control">
+                                    <input name="email" [(ngModel)]="email" type="email" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control">
+                                    <input name="phoneNo" [(ngModel)]="phoneNo" type="text" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Username</label>
-                                    <input type="text" class="form-control">
+                                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control">
+                                    <input name="password" [(ngModel)]="password" type="password" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <label for="" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control">
+                                    <input name="confirmPassword" [(ngModel)]="confirmPassword" type="password" class="form-control">
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                                    <button class="btn btn-dark">Sign Up</button>
+                                    <button (click)="readValues()" class="btn btn-dark">Sign Up</button>
                                 </div>
                                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center mt-3">
                                     <a routerLink="/login" class="btn bg-secondary text-white">Back to user <span class="btn btn-light ml-2">Login</span></a>

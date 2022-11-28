@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AdminLoginComponent {
 
+  username = ""
+  password = ""
+
+  readValues = () => {
+    let data = {
+      "username": this.username,
+      "password": this.password
+    }
+    console.log(data);
+    
+  }
 }
