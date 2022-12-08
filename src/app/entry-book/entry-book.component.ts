@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./entry-book.component.css']
 })
 export class EntryBookComponent {
-    title = ""
+    bookTitle = ""
     authorName = ""
     description = ""
     publisher = ""
@@ -18,7 +18,7 @@ export class EntryBookComponent {
 
     readValues = () => {
       let data = {
-        "title":this.title,
+        "bookTitle":this.bookTitle,
         "authorName":this.authorName,
         "description":this.description,
         "publisher":this.publisher,
