@@ -8,10 +8,42 @@
                     <label for="" class="form-label">Book Title</label>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
+                    <input name="bookTitle" [(ngModel)]="bookTitle" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
                     <button (click)="readValues()" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 m-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table" *ngIf="hide">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Description</th>
+                                <th>Publisher</th>
+                                <th>Language</th>
+                                <th>Distributor</th>
+                                <th>Released Year</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of searchData">
+                                <td><img src={{i.image}} alt="image" height="150px" width="150px"></td>
+                                <td>{{i.bookTitle}}</td>
+                                <td>{{i.authorName}}</td>
+                                <td>{{i.description}}</td>
+                                <td>{{i.publisher}}</td>
+                                <td>{{i.language}}</td>
+                                <td>{{i.distributor}}</td>
+                                <td>{{i.releasedYear}}</td>
+                                <td>{{i.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

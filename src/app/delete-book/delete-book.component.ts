@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-delete-book',
@@ -6,14 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./delete-book.component.css']
 })
 export class DeleteBookComponent {
+  constructor(private api:ApiService){}
   
-  title = ""
+  bookTitle = ""
 
   readValues = () => {
     let data = {
-      "title":this.title
+      "bookTitle":this.bookTitle
     }
     console.log(data);
     
+    this.api.deleteBook(data).subscribe(
+      (response:any) => {
+        console.log(response);
+      }
+    )
   }
 }
