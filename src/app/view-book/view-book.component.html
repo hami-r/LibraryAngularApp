@@ -5,13 +5,13 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 m-3">
                 <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of books">
-                    <div class="card shadow-sm">
-                        <img src="{{i.image}}" class="card-img-top" alt="...">
+                    <div class="card shadow-sm w-100">
+                        <img height="200px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body text-center">
-                          <h5 class="card-title">Book Title: {{i.title}}</h5>
-                          <p class="card-text">Author Name:{{i.author}}</p>
+                          <h5 class="card-title">{{i.bookTitle}}</h5>
+                          <p class="card-text">By {{i.authorName}}</p>
                           <p class="card-text">${{i.price}}</p>
-                          <a href="#" class="btn btn-dark text-end">Know More</a>
+                          <a href="/view" class="btn btn-dark text-end">Know More</a>
                         </div>
                       </div>
                 </div>
